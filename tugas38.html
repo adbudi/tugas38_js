@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Belajar javascript -NIOMIC</title>
+    <style media="screen">
+      .contohstyle{
+        color : red;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" onclick="Tombol()" name="button">Jalankan</button>
+    <br>
+    <br>
+    <br>
+    Atribut <b>removeNameItem()</b> : <br>
+    <input value="Inputan"><br>
+    <hr>
+    Atribut <b>setNamedItem</b> : <br>
+    <i>contoh</i>
+    <hr>
+    Atribut <b>value</b> :
+    <p id="val">contoh</p>
+    <hr>
+<script type="text/javascript">
+function Tombol() {
+  var x = document.getElementsByTagName("button")[0];
+  var y = document.getElementsByTagName("input")[0];
+  var z = document.getElementsByTagName("i")[0];
+  var b = document.createAttribute("class");
+  var c = x.attributes[1].value;
+  document.getElementById("val").innerHTML = c;
+
+  b.value = "contohstyle";
+  z.attributes.setNamedItem(b);
+
+  y.attributes.removeNamedItem("value");
+  y.attributes.removeNamedItem("type");
+
+}
+
+</script>
+  </body>
+</html>
